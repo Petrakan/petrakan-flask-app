@@ -1,0 +1,27 @@
+{%extends 'base.html'%} 
+
+{%block title%}Список статей{%endblock%} 
+
+{%block content%}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Список статей</h1>
+  <p class="lead">Пробный список статей.</p>
+ 
+  <div class="row justify-content-center pt-3">
+    <div class="col-md-8">
+   
+      {% for post in articles %}
+        <div class="alert alert-info">
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.intro }}</p>
+          <p><b>Дата: {{post.date.date()}}</b></p>
+          <a class="btn btn-outline-primary" href="/articles/{{ post.id }}">Читать</a>
+        </div>
+      {% endfor %}
+  
+    </div>
+  </div>
+
+</div>
+
+{%endblock%}

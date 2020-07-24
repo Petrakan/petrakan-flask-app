@@ -1,0 +1,38 @@
+{%extends 'base.html'%} 
+
+{%block title%}Редактирование статьи{%endblock%} 
+
+{%block content%}
+<div class="container">
+  <h1 class="pt-5 display-4 text-center">Редактирование статьи</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form class="pt-5" method="post">
+        <input
+          class="form-control"
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Введите название"
+          value="{{ article.title }}"
+        /><br />
+        <textarea
+          class="form-control"
+          name="intro"
+          id="intro"
+          placeholder="Введите описание"
+        >{{ article.intro }}</textarea
+        ><br />
+        <textarea
+          class="form-control"
+          name="text"
+          id="text"
+          placeholder="Введите основной текст"
+        >{{ article.text }}</textarea
+        ><br />
+        <input class="btn btn-outline-primary" type="submit" value="Редактировать" />
+      </form>
+    </div>
+  </div>
+</div>
+{%endblock%}
