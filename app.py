@@ -14,7 +14,8 @@ db = SQLAlchemy(app)
 @app.route('/')
 @app.route('/home')
 def index():
-    return render_template('index.html')
+    articles = Articles.query.order_by(Articles.date.desc()).all()
+    return render_template('index.html', articles=articles)
 
 
 @app.route('/about')

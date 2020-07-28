@@ -5,21 +5,24 @@
 {%endblock%}
 
 {%block content%}
+<div class="bg-light">
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">{{ article.title }}</h1>
 
   <div class="row justify-content-center pt-3">
     <div class="col-md-10">
-      <div class="alert alert-info">
-        <h2>{{ article.title }}</h2>
+      <div class="bg-white">
+        <!-- <div class="col-10"> -->
         <p>{{ article.text }}</p>
         <p>
           <b>Дата: {{ article.date.date() }}</b>
         </p>
         <a href="/articles/{{ article.id }}/update" class="btn btn-outline-success">Редактировать</a>
         <a href="/articles/{{ article.id }}/delete" class="btn btn-outline-danger">Удалить</a>
+        <!-- </div> -->
       </div>
     </div>
   </div>
+</div>
 </div>
 {%endblock%}

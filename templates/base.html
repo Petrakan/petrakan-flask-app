@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/27041fb99d.js" crossorigin="anonymous"></script>
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm">
       <div class="container-fluid">
-      <a class="navbar-brand" href="/home">Flask.notes</a>
+          <i style="font-size:1.7em; color: white;" class="fab fa-affiliatetheme fa-lg ml-3"></i>
+          <a class="navbar-brand ml-3" href="/home">Flask.notes</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,14 +23,10 @@
           <li class="nav-item">
             <a class="nav-link" href="/articles">Статьи</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">О нас</a>
-          </li>
+          <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link" href="/about">О нас</a> -->
+          <!-- </li> -->
         </ul>
-        <form class="d-flex my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Поиск</button>
-        </form>
         <a class="btn btn-outline-light ml-auto" href="/create_article">Создать статью</a>
       </div>
       </div>
@@ -36,6 +34,15 @@
    <div class="">
       {% block content %}{%endblock%}
     </div>
+    <footer class="text-muted">
+      <div class="container pt-4 mb-3">
+        <p class="float-right">
+          <a class="text-muted" href="#">Вверх</a>
+        </p>
+        <p>Здарова!</p>
+        <p>Разработчик: Петраков Алексей <a class="text-muted" href="https://vk.com/aleksey_petrakov">Vkontakte</a> или <a class="text-muted" href="https://github.com/Petrakan">Github</a></p>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
   </body>
