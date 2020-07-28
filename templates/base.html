@@ -7,23 +7,36 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-    <div class="fixed-top d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-      <h5 class="my-0 mr-md-auto font-weight-normal">Пробный блог на Flask</h5>
-      <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="/">Главная</a>
-        <a class="p-2 text-dark" href="/articles">Статьи</a>
-        <a class="p-2 text-dark" href="/about">О нас</a>
-
-      </nav>
-      <a class="btn btn-outline-primary" href="/create_article">Создать статью</a>
-    </div>
-    
-    <div class="pt-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="#">Flask.notes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/home">Главная<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/articles">Статьи</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">О нас</a>
+          </li>
+        </ul>
+        <form class="d-flex my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Поиск</button>
+        </form>
+        <a class="btn btn-outline-light ml-auto" href="/create_article" target="_blank">Создать статью</a>
+      </div>
+      </div>
+    </nav>
+   <div class="">
       {% block content %}{%endblock%}
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-  
   </body>
 </html>
